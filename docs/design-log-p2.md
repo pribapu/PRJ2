@@ -32,9 +32,10 @@ The copy assignment operator also creates an independent copy before replacing t
 
 The move constructor and move assignment operator transfer ownership of the array instead of copying every message. After the move, the original object's pointer, size, and capacity are reset so that it is still safe to destroy or reuse.
 I tested the copy operations by making sure the copied object had a different array address from the original. I also tested the move operations by checking that the new object received the original array address.
+```
 
+## Sentinel Scanner Memory
 
-##Sentinel Scanner Memory
 The SentinelScanner keeps part of the incoming text in pending_ so it can detect a sentinel that is split across multiple chunks.
 For example, if part of:
 <|end_conversation|>
@@ -48,7 +49,7 @@ Because of this, the amount of stored text does not continue growing as more inp
 I also tested this by feeding input one character at a time and checking that the amount of buffered text stayed within the expected limit.
 
 
-##What I Would Change
+## What I Would Change
 
 The scanner currently uses:
 pending_.find(sentinel_);
