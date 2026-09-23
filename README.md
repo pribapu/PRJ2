@@ -19,9 +19,9 @@ assistant> I can definitely do that for you. Anything else?
 you> bye
 assistant> Goodbye!
 [conversation ended: stop sentinel after 3 turns]
+```
 
-
-##What I Implemented
+## What I Implemented
 Message
 Files:
 - include/core/message.h
@@ -77,7 +77,7 @@ The tests check the main parts of the project, including:
 - transcript replay
 
 
-##Provided Starter Code
+## Provided Starter Code
 The following parts were provided and were not part of my main implementation:
 - include/model/
 - include/harness/
@@ -89,7 +89,7 @@ The following parts were provided and were not part of my main implementation:
 These files provide the model clients, conversation harness, and command-line interface.
 Build
 
-##To build the project:
+## To build the project:
 cmake -S . -B build
 cmake --build build
 This creates:
@@ -118,7 +118,7 @@ Example:
 The default maximum is 20 turns.
 
 
-##Testing
+## Testing
 The project is compiled with warning and sanitizer options including:
 -Wall
 -Wextra
